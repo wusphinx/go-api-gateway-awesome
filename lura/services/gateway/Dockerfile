@@ -1,0 +1,26 @@
+## Build
+FROM golang:1.18-buster AS build
+
+WORKDIR /app
+
+COPY go.mod ./
+COPY go.sum ./
+RUN go env -w GOPROXY=https://goproxy.cn,direct && go mod download
+
+COPY *.go ./
+
+RUN go build -o /app
+
+## Deploy gcr.io/distroless/base-debian10
+FROM knative-dev-registry.cn-hangzhou.cr.aliyuncs.com/distroless/base-debian10
+
+WORKDIR /
+
+COPY --from=build /app /app
+COPY config.json config.json
+
+EXPOSE 8080
+
+USER nonroot:nonroot
+
+ENTRYPOINT ["/app"]

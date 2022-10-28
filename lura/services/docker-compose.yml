@@ -1,0 +1,12 @@
+version: '3'
+services:
+  one:
+    build:
+      context: ./one
+  gateway:
+    build:
+      context: ./gateway
+    depends_on:
+      - one
+    ports:
+      - "8000:8000"
