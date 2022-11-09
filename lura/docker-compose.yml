@@ -2,10 +2,10 @@ version: '3'
 services:
   one:
     build:
-      context: ./one
-  gateway:
+      context: ../one
+  lura:
     build:
-      context: ./gateway
+      context: .
     depends_on:
       - one
     ports:
