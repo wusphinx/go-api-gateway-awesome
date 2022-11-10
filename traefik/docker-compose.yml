@@ -1,0 +1,14 @@
+version: '3'
+services:
+  one:
+    build:
+      context: ../one
+  gateway:
+    image: traefik:v2.9.4
+    ports:
+      - "8080:80"
+    volumes:
+      - ./confd:/opt/confd
+      - ./traefik.yml:/traefik.yml
+    depends_on:
+      - one

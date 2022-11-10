@@ -1,0 +1,4 @@
+providers:
+  file:
+    directory: /opt/confd
+    watch: true

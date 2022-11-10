@@ -1,0 +1,19 @@
+http:
+  middlewares:
+    test-stripprefix:
+      stripPrefix:
+        prefixes:
+          - "/one"
+
+  routers:
+    my-router:
+      rule: "PathPrefix(`/one`)"
+      service: service-one
+      middlewares:
+        - test-stripprefix
+
+  services:
+    service-one:
+      loadBalancer:
+        servers:
+          - url: "http://one:8080"

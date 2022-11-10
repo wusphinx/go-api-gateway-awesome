@@ -1,0 +1,13 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+entryPoints:
+  web:
+    address: :80
+log:
+  level: DEBUG
+  filePath: "/opt/traefik.log"
+
+accessLog:
+  filePath: "/opt/access.log"
