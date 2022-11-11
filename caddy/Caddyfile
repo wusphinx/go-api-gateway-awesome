@@ -1,0 +1,5 @@
+:80
+handle_path /one/* {
+	rewrite * {path}
+	reverse_proxy one:8080
+}
