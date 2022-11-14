@@ -6,7 +6,7 @@ api gateway implemented by go in real world
 | [lura](/lura)         | 
 | [caddy](/caddy)     | 
 | [traefik](/traefik)   | 
-
+| [easegress](/easegress)   | 
 
 # 对比
 这几个网关均是均是笔者过去一年多在实际工作中调用过的网关，其中lura、traefik均有在生产环境中使用过，生产环境日均请求总量不超过10w，因为主要是公司内部使用，QPS也很小。就实际使用体验来讲，这几个网关各有优势
