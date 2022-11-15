@@ -1,0 +1,12 @@
+name: pipeline-demo
+kind: Pipeline
+flow:
+  - filter: proxy
+filters:
+  - name: proxy
+    kind: Proxy
+    pools:
+    - servers:
+      - url: http://one:8080
+      loadBalance:
+        policy: roundRobin
