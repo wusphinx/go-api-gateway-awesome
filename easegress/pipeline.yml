@@ -3,6 +3,11 @@ kind: Pipeline
 flow:
   - filter: proxy
 filters:
+  - name: requestAdaptor
+    kind: RequestAdaptor
+    host: one
+    path:
+    trimPrefix: /one
   - name: proxy
     kind: Proxy
     pools:
