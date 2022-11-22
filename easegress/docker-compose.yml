@@ -8,5 +8,5 @@ services:
     ports:
       - "10080:10080"
     volumes:
-      - ./config.yml:/opt/config.yml
-      - ./pipeline.yml:/opt/pipeline.yml
+      - ./config:/opt/config
+      - ./init.sh:/init.sh

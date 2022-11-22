@@ -1,13 +1,13 @@
 name: pipeline-demo
 kind: Pipeline
 flow:
+  - filter: requestAdaptor
   - filter: proxy
 filters:
   - name: requestAdaptor
     kind: RequestAdaptor
-    host: one
     path:
-    trimPrefix: /one
+      trimPrefix: /one
   - name: proxy
     kind: Proxy
     pools:
@@ -15,3 +15,4 @@ filters:
       - url: http://one:8080
       loadBalance:
         policy: roundRobin
+        
