@@ -10,3 +10,5 @@ services:
       - one
     ports:
       - "8000:8000"
+    volumes:
+      - ./config.json:/config.json

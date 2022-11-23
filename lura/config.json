@@ -19,7 +19,7 @@
             }],
             "concurrent_calls": 1,
             "timeout": "1000s",
-            "cache_ttl": 3600
+            "cache_ttl": "3600s"
         }
     ]
 }

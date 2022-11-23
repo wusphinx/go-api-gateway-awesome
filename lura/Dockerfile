@@ -17,7 +17,6 @@ FROM knative-dev-registry.cn-hangzhou.cr.aliyuncs.com/distroless/base-debian10
 WORKDIR /
 
 COPY --from=build /opt /
-COPY config.json config.json
 
 EXPOSE 8080
 
