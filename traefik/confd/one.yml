@@ -5,12 +5,23 @@ http:
         prefixes:
           - "/one"
 
+    test-replacepathregex:
+      replacePathRegex:
+        regex: "^/api/one/(.*)"
+        replacement: "/$1"
+
   routers:
     my-router:
       rule: "PathPrefix(`/one`)"
       service: service-one
       middlewares:
         - test-stripprefix
+
+    my-router1:
+      rule: "PathPrefix(`/api/one/`)"
+      service: service-one
+      middlewares:
+        - test-replacepathregex
 
   services:
     service-one:
