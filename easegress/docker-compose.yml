@@ -4,7 +4,7 @@ services:
     build:
       context: ../one
   gateway:
-    image: megaease/easegress:v2.2.0
+    image: megaease/easegress:v2.3.0
     ports:
       - "10080:10080"
     volumes:
