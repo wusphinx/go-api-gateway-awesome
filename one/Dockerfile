@@ -1,4 +1,4 @@
-## Build
+# syntax=docker/dockerfile:1.4
 FROM golang:1.18-buster AS build
 
 WORKDIR /opt

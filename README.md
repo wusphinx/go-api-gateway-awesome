@@ -17,3 +17,7 @@ api gateway implemented by go in real world
 - easegress是国产网关，目前还是快速迭代中，使用体验也挺不错，与traefik风格类似，当然因为项目比较新，示例较少，喜欢尝鲜的同学可以一试
 
 如果流量较小的项目，笔者首推traefik，定制插件的开发也相对容易一些。
+
+
+refer:
+- [如何使用 docker buildx 构建跨平台 Go 镜像](https://waynerv.com/posts/building-multi-architecture-images-with-docker-buildx/)
