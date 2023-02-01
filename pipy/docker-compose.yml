@@ -1,0 +1,16 @@
+version: '3'
+services:
+  one:
+    build:
+      context: ../one
+  pipy:
+    # 需要源码打出最新镜像
+    image: pipyd2
+    command: pipy /opt/main.js
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./:/opt/"
+
+    depends_on:
+      - one
