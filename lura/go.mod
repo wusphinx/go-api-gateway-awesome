@@ -2,7 +2,7 @@ module github.com/wusphinx/go-api-gateway-awesome/lura
 
 go 1.18
 
-require github.com/luraproject/lura/v2 v2.2.4
+require github.com/luraproject/lura/v2 v2.2.5
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -20,7 +20,7 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/ugorji/go v0.0.0-20180112141927-9831f2c3ac10 // indirect
 	github.com/valyala/fastrand v1.1.0 // indirect
-	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3 // indirect
+	golang.org/x/crypto v0.1.0 // indirect
 	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
