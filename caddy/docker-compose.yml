@@ -4,7 +4,7 @@ services:
     build:
       context: ../one
   gateway:
-    image: caddy:2.6.3-alpine
+    image: caddy:2.6.4-alpine
     ports:
       - "8080:80"
     volumes:
