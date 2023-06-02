@@ -2,7 +2,7 @@ module github.com/wusphinx/go-api-gateway-awesome/lura
 
 go 1.18
 
-require github.com/luraproject/lura/v2 v2.2.7
+require github.com/luraproject/lura/v2 v2.2.8
 
 require (
 	github.com/bytedance/sonic v1.8.0 // indirect
