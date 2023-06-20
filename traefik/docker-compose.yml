@@ -4,7 +4,7 @@ services:
     build:
       context: ../one
   gateway:
-    image: traefik:v2.10.1
+    image: traefik:v3.0.0-beta2
     ports:
       - "8080:80"
     volumes:
