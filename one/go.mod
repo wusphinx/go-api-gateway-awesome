@@ -1,6 +1,6 @@
 module github.com/go-api-gateway-awesome/one
 
-go 1.18
+go 1.21
 
 require github.com/gin-gonic/gin v1.9.0
 

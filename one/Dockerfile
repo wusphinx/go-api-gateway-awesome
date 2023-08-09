@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM golang:1.18-buster AS build
+FROM golang:1.21.0-bullseye AS build
 
 WORKDIR /opt
 
