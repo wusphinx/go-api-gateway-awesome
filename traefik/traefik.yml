@@ -1,4 +1,21 @@
 providers:
-  file:
-    directory: /opt/confd
-    watch: true
+  http:
+    endpoint: http://sd:9000/api
+    pollTimeout: "5s"
+
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+accessLog: {}
+
+log:
+  level: DEBUG
+
+api:
+  dashboard: true
+  insecure: true
+
+entryPoints:
+  web:
+    address: :80

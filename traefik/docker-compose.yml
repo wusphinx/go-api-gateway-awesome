@@ -3,12 +3,15 @@ services:
   one:
     build:
       context: ../one
+  sd:
+    build:
+      context: sd
+
   gateway:
     image: traefik:v3.0.0-beta3
     ports:
       - "8080:80"
     volumes:
-      - ./confd:/opt/confd
       - ./traefik.yml:/traefik.yml
     depends_on:
       - one
